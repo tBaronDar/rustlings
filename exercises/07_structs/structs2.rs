@@ -34,7 +34,19 @@ mod tests {
         let order_template = create_order_template();
 
         // TODO: Create your own order using the update syntax and template above!
-        // let your_order =
+        let your_order = update_order_template(&order_template);
+
+        fn update_order_template(order: &Order) -> Order {
+            Order {
+                name: String::from("Hacker in Rust"),
+                year: (order.year),
+                made_by_phone: (order.made_by_phone),
+                made_by_mobile: (order.made_by_mobile),
+                made_by_email: (order.made_by_email),
+                item_number: (order.item_number),
+                count: (1),
+            }
+        }
 
         assert_eq!(your_order.name, "Hacker in Rust");
         assert_eq!(your_order.year, order_template.year);
