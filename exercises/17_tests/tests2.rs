@@ -11,13 +11,13 @@ fn main() {
 #[cfg(test)]
 mod tests {
     use super::*;
-
     #[test]
     fn you_can_assert_eq() {
+        let base: u64 = 2;
         // TODO: Test the function `power_of_2` with some values.
-        assert_eq!();
-        assert_eq!();
-        assert_eq!();
-        assert_eq!();
+        assert_eq!(power_of_2(2), 4);
+        assert_eq!(power_of_2(4), 16);
+        assert_eq!(power_of_2(8), base.pow(8));
+        assert_eq!(power_of_2(4), 2u64.pow(4));
     }
 }
